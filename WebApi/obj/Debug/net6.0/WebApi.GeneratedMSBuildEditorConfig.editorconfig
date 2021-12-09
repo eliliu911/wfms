@@ -15,6 +15,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\wfms\WebApi
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
