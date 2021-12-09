@@ -10,6 +10,7 @@ using WebApi.Models;
 
 namespace WebApi.Controllers
 {
+    //列举所有员工及对应任务
     [Route("api/[controller]")]
     [ApiController]
     public class V_EmployeeTasksController : ControllerBase
@@ -42,63 +43,63 @@ namespace WebApi.Controllers
             return v_EmployeeTasks;
         }
 
-        // PUT: api/V_EmployeeTasks/5
-        // update
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutV_EmployeeTasks(int id, V_EmployeeTasks v_EmployeeTasks)
-        {
-            if (id != v_EmployeeTasks.Id)
-            {
-                return BadRequest();
-            }
+        //// PUT: api/V_EmployeeTasks/5
+        //// update
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutV_EmployeeTasks(int id, V_EmployeeTasks v_EmployeeTasks)
+        //{
+        //    if (id != v_EmployeeTasks.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(v_EmployeeTasks).State = EntityState.Modified;
+        //    _context.Entry(v_EmployeeTasks).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!V_EmployeeTasksExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!V_EmployeeTasksExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
-        // POST: api/V_EmployeeTasks
-        // Add
-        [HttpPost]
-        public async Task<ActionResult<V_EmployeeTasks>> PostV_EmployeeTasks(V_EmployeeTasks v_EmployeeTasks)
-        {
-            //_context.V_EmployeeTaskss.Add(v_EmployeeTasks);
-            await _context.SaveChangesAsync();
+        //// POST: api/V_EmployeeTasks
+        //// Add
+        //[HttpPost]
+        //public async Task<ActionResult<V_EmployeeTasks>> PostV_EmployeeTasks(V_EmployeeTasks v_EmployeeTasks)
+        //{
+        //    //_context.V_EmployeeTaskss.Add(v_EmployeeTasks);
+        //    await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetV_EmployeeTasks", new { id = v_EmployeeTasks.Id }, v_EmployeeTasks);
-        }
+        //    return CreatedAtAction("GetV_EmployeeTasks", new { id = v_EmployeeTasks.Id }, v_EmployeeTasks);
+        //}
 
-        // DELETE: api/V_EmployeeTasks/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteV_EmployeeTasks(int id)
-        {
-            var v_EmployeeTasks = await _context.V_EmployeeTasks.FindAsync(id);
-            if (v_EmployeeTasks == null)
-            {
-                return NotFound();
-            }
+        //// DELETE: api/V_EmployeeTasks/5
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteV_EmployeeTasks(int id)
+        //{
+        //    var v_EmployeeTasks = await _context.V_EmployeeTasks.FindAsync(id);
+        //    if (v_EmployeeTasks == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            //_context.V_EmployeeTaskss.Remove(v_EmployeeTasks);
-            await _context.SaveChangesAsync();
+        //    //_context.V_EmployeeTaskss.Remove(v_EmployeeTasks);
+        //    await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         private bool V_EmployeeTasksExists(int id)
         {

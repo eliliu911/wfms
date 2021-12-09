@@ -10,6 +10,7 @@ using WebApi.Models;
 
 namespace WebApi.Controllers
 {
+    //单独的员工管理
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeesController : ControllerBase
@@ -43,6 +44,7 @@ namespace WebApi.Controllers
         }
 
         // PUT: api/Employees/5
+        //update
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(int id, Employee employee)
         {
