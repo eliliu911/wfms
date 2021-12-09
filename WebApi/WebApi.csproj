@@ -23,12 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Web\Controllers\" />
     <Folder Include="Areas\Web\Data\" />
-    <Folder Include="Areas\Web\Models\" />
-    <Folder Include="Areas\Web\Views\" />
-    <Folder Include="Areas\" />
     <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
