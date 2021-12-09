@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebApi.Models;
 
 namespace WebApi.Data
 {
@@ -8,5 +9,7 @@ namespace WebApi.Data
         {
 
         }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Models.Task> Tasks { get; set; }
     }
 }
