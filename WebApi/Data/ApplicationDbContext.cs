@@ -11,5 +11,7 @@ namespace WebApi.Data
         }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Models.Task> Tasks { get; set; }
+        public DbSet<Relation> Relations { get; set; }
+        public DbSet<V_EmployeeTasks> V_EmployeeTasks { get; set; }
     }
 }

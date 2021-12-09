@@ -46,6 +46,25 @@ namespace WebApi.Migrations
                     b.ToTable("Employees");
                 });
 
+            modelBuilder.Entity("WebApi.Models.Relation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Eid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Tid")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Relations");
+                });
+
             modelBuilder.Entity("WebApi.Models.Task", b =>
                 {
                     b.Property<int>("Id")

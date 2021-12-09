@@ -12,7 +12,7 @@ using WebApi.Data;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211209002404_AddEmployeeToDatabase")]
+    [Migration("20211209051717_AddEmployeeToDatabase")]
     partial class AddEmployeeToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,25 @@ namespace WebApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("WebApi.Models.Relation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Eid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Tid")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Relations");
                 });
 
             modelBuilder.Entity("WebApi.Models.Task", b =>
