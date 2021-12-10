@@ -35,6 +35,7 @@
   <ItemGroup>
     <Folder Include="Areas\Web\Data\" />
     <Folder Include="Migrations\" />
+    <Folder Include="DB\" />
   </ItemGroup>
 
   <ItemGroup>
