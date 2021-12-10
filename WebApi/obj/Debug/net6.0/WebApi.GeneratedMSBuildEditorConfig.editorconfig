@@ -47,6 +47,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

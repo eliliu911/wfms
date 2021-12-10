@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "79ba26ae-1b2b-40de-b7a4-a6ecca94940f": {
+      "ProjectGuid": "79ba26ae-1b2b-40de-b7a4-a6ecca94940f",
+      "DisplayName": "WebApi",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    },
+    "a2559e02-3155-43fc-bb07-2725a34aa483": {
+      "ProjectGuid": "a2559e02-3155-43fc-bb07-2725a34aa483",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
