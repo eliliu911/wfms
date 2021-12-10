@@ -34,5 +34,13 @@
             <param name="id">Employee id</param>
             <returns></returns>
         </member>
+        <member name="M:WebApi.Controllers.EmployeesGenController.DeleteTaskFromEmployee(System.Int32,System.Int32)">
+            <summary>
+            Use id to delete task from Table Relations ,Only delete form Relation.
+            </summary>
+            <param name="id">Employee Id</param>
+            <param name="tid">Task id</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
