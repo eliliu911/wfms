@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.EmployeesGenController.GetAllAsync">
+            <summary>
+            GetAll
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.EmployeesGenController.GetAllAsync(System.Int32)">
+            <summary>
+            Get By ID
+            </summary>
+            <param name="id">Employee id</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesGenController.PostEmployee_Gen(WebApi.Models.Employee_Gen)" -->
+        <member name="M:WebApi.Controllers.EmployeesGenController.AddTasktoEmployee(System.Int32,System.Collections.Generic.List{WebApi.Models.Task})">
+            <summary>
+            Add Tasks to Employee
+            </summary>
+            <param name="id">Emplpyee id</param>
+            <param name="tasks">New Tasks</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesGenController.PutEmployee_Gen(System.Int32,WebApi.Models.Employee_Gen)" -->
+        <member name="M:WebApi.Controllers.EmployeesGenController.DeleteEmployee_Gen(System.Int32)">
+            <summary>
+            Delete all by id
+            </summary>
+            <param name="id">Employee id</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
