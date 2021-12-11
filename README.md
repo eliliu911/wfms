@@ -19,9 +19,8 @@ Bootstrap
 Bootswtch
 Toaster
 
-
 ## WebApi
-EmployeesController 仅对与Employee进行CURD
+EmployeesController 仅对Employee进行CURD
 EmployeesTasksController 对于员工信息和员工任务进行CURD
 
 
