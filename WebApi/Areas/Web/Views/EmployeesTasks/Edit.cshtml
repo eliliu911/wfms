@@ -1,0 +1,78 @@
+﻿@model WebApi.Models.Employee_Gen
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Employee.Id" />
+            <div class="form-group">
+                <label asp-for="Employee.FristName" class="control-label"></label>
+                <input asp-for="Employee.FristName" class="form-control" />
+                <span asp-validation-for="Employee.FristName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.LastName" class="control-label"></label>
+                <input asp-for="Employee.LastName" class="form-control" />
+                <span asp-validation-for="Employee.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.HiredDate" class="control-label"></label>
+                <input asp-for="Employee.HiredDate" class="form-control" />
+                <span asp-validation-for="Employee.HiredDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" 
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tasks[0].TaskName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tasks[0].StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tasks[0].Deadline)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Tasks) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deadline)
+            </td>
+            <td>
+                <a asp-action="EditTask" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="DeleteTask" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+<div>
+    <a asp-action="CreateTask" asp-route-id="@Model.Employee.Id">Create New Task</a> &nbsp;
+    <a asp-action="Index">Back to List</a>
+</div>
+

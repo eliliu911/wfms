@@ -15,20 +15,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\wfms\WebApi
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xDcmVhdGUuY3NodG1s
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xEZWxldGUuY3NodG1s
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/CreateTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXENyZWF0ZVRhc2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xFZGl0LmNzaHRtbA==
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Employees/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1xJbmRleC5jc2h0bWw=
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/DeleteTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXERlbGV0ZVRhc2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/EditTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXEVkaXRUYXNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/EmployeesTasks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXEVtcGxveWVlc1Rhc2tzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Home/Index.cshtml]
@@ -45,26 +61,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/Tasks/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2ViXFZpZXdzXFRhc2tzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/wfms/WebApi/Areas/Web/Views/_ViewImports.cshtml]

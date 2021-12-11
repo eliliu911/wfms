@@ -1,16 +1,13 @@
 ﻿@model WebApi.Models.Task
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "CreateTask";
 }
 
-<h1>Create</h1>
+<h1>CreateTask</h1>
 
-<h4>Task</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form method="post" asp-action="CreateTask">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="TaskName" class="control-label"></label>
@@ -34,4 +31,3 @@
         </form>
     </div>
 </div>
-
