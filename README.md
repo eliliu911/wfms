@@ -5,6 +5,7 @@ Work flow manage system
 ## 项目设计
 使用ASP.NET Core WebApi + MVC 实现接口和WebSite
 数据库使用MS SQLServer
+使用前请还原数据库备份文件 \DB\wfms.bak
 开发工具 Visual Studio 2022
 
 ## 框架使用
