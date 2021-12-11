@@ -112,13 +112,15 @@
         </member>
         <member name="M:WebApi.Controllers.EmployeesTasksController.GetAllAsync">
             <summary>
-            GetAll --获取所有员工数据
+            GetAll 
+            --获取所有员工数据
             </summary>
             <returns></returns>
         </member>
         <member name="M:WebApi.Controllers.EmployeesTasksController.GetAllAsync(System.Int32)">
             <summary>
-            Get By ID -- 根据id获取员工数据
+            Get By ID 
+            --根据id获取员工数据
             </summary>
             <param name="id">Employee id</param>
             <returns></returns>
@@ -126,24 +128,34 @@
         <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesTasksController.CreateEmployees_Tasks(WebApi.Models.Employee_Gen)" -->
         <member name="M:WebApi.Controllers.EmployeesTasksController.AddTasktoEmployee(System.Int32,System.Collections.Generic.List{WebApi.Models.Task})">
             <summary>
-            Add Tasks to Employee --通过Employee ID向其添加任务
+            Add Tasks to Employee 
+            --通过Employee ID向其添加任务
             </summary>
             <param name="id">Emplpyee id</param>
             <param name="tasks">New Tasks</param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesTasksController.PutEmployee_Gen(System.Int32,WebApi.Models.Employee_Gen)" -->
+        <member name="M:WebApi.Controllers.EmployeesTasksController.PutEmployee_Gen(System.Int32,WebApi.Models.Employee_Gen)">
+            <summary>
+            Update employee and task
+            --更新员工和任务数据
+            </summary>
+            <param name="id">员工id</param>
+            <param name="employee_Gen">员工model</param>
+            <returns></returns>
+        </member>
         <member name="M:WebApi.Controllers.EmployeesTasksController.DeleteEmployee_Gen(System.Int32)">
             <summary>
             Delete all by id
-            删除员工及其任务
+            --删除员工及其任务
             </summary>
             <param name="id">Employee id</param>
             <returns></returns>
         </member>
         <member name="M:WebApi.Controllers.EmployeesTasksController.DeleteTaskFromEmployee(System.Int32,System.Int32)">
             <summary>
-            Use id to delete task.
+            Use id to delete task. 
+            --根据任务ID删除任务
             </summary>
             <param name="id">Employee Id</param>
             <param name="tid">Task id</param>
