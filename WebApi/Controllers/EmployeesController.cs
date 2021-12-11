@@ -11,7 +11,7 @@ using WebApi.Models;
 namespace WebApi.Controllers
 {
     //单独的员工管理
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class EmployeesController : ControllerBase
     {

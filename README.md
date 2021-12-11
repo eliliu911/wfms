@@ -18,14 +18,14 @@ Jquery
 Bootstrap
 Bootswtch
 
-## 示例地址
-WebApi ： https://localhost:44312/
-WebSite： https://localhost:44312/web
 
 ## WebApi
 EmployeesController 仅对与Employee进行CURD
-TasksController 仅对于Task进行CURD
-EmployeesGenController 对于员工信息和员工任务进行CURD
-V_EmployeeTasksController 列举全部员工和对应任务信息
+EmployeesTasksController 对于员工信息和员工任务进行CURD
+
+
+## 示例地址
+WebApi ： https://localhost:44312/
+WebSite： https://localhost:44312/web
 
 #方案二：前后端分离，后端使用WebApi接口，前端使用ElementUI + Vue。开发成本略高。

@@ -110,39 +110,40 @@
             <param name="id">任务ID</param>
             <returns></returns>
         </member>
-        <member name="M:WebApi.Controllers.EmployeesGenController.GetAllAsync">
+        <member name="M:WebApi.Controllers.EmployeesTasksController.GetAllAsync">
             <summary>
-            GetAll
+            GetAll --获取所有员工数据
             </summary>
             <returns></returns>
         </member>
-        <member name="M:WebApi.Controllers.EmployeesGenController.GetAllAsync(System.Int32)">
+        <member name="M:WebApi.Controllers.EmployeesTasksController.GetAllAsync(System.Int32)">
             <summary>
-            Get By ID
+            Get By ID -- 根据id获取员工数据
             </summary>
             <param name="id">Employee id</param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesGenController.PostEmployee_Gen(WebApi.Models.Employee_Gen)" -->
-        <member name="M:WebApi.Controllers.EmployeesGenController.AddTasktoEmployee(System.Int32,System.Collections.Generic.List{WebApi.Models.Task})">
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesTasksController.CreateEmployees_Tasks(WebApi.Models.Employee_Gen)" -->
+        <member name="M:WebApi.Controllers.EmployeesTasksController.AddTasktoEmployee(System.Int32,System.Collections.Generic.List{WebApi.Models.Task})">
             <summary>
-            Add Tasks to Employee
+            Add Tasks to Employee --通过Employee ID向其添加任务
             </summary>
             <param name="id">Emplpyee id</param>
             <param name="tasks">New Tasks</param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesGenController.PutEmployee_Gen(System.Int32,WebApi.Models.Employee_Gen)" -->
-        <member name="M:WebApi.Controllers.EmployeesGenController.DeleteEmployee_Gen(System.Int32)">
+        <!-- Badly formed XML comment ignored for member "M:WebApi.Controllers.EmployeesTasksController.PutEmployee_Gen(System.Int32,WebApi.Models.Employee_Gen)" -->
+        <member name="M:WebApi.Controllers.EmployeesTasksController.DeleteEmployee_Gen(System.Int32)">
             <summary>
             Delete all by id
+            删除员工及其任务
             </summary>
             <param name="id">Employee id</param>
             <returns></returns>
         </member>
-        <member name="M:WebApi.Controllers.EmployeesGenController.DeleteTaskFromEmployee(System.Int32,System.Int32)">
+        <member name="M:WebApi.Controllers.EmployeesTasksController.DeleteTaskFromEmployee(System.Int32,System.Int32)">
             <summary>
-            Use id to delete task from Table Relations ,Only delete form Relation.
+            Use id to delete task.
             </summary>
             <param name="id">Employee Id</param>
             <param name="tid">Task id</param>

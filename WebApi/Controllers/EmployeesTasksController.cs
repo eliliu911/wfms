@@ -7,20 +7,22 @@ using WebApi.Models;
 namespace WebApi.Controllers
 {
     //员工和任务管理CRUD
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
-    public class EmployeesGenController : ControllerBase
+    public class EmployeesTasksController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        public EmployeesGenController(ApplicationDbContext context)
+        public EmployeesTasksController(ApplicationDbContext context)
         {
             _context = context;
         }
         /// <summary>
-        /// GetAll
+        /// GetAll 
+        /// --获取所有员工数据
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [ActionName(nameof(GetAllAsync))]
         public async Task<ActionResult<IEnumerable<Employee_Gen>>> GetAllAsync() 
         {
             List<Employee_Gen> employee_Gens = new List<Employee_Gen>();
@@ -47,14 +49,15 @@ namespace WebApi.Controllers
             return employee_Gens;
         }
         /// <summary>
-        /// Get By ID
+        /// Get By ID 
+        /// --根据id获取员工数据
         /// </summary>
         /// <param name="id">Employee id</param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<Employee_Gen>>> GetAllAsync(int id)
+        [ActionName(nameof(GetAllAsync))]
+        public async Task<ActionResult<Employee_Gen>> GetAllAsync(int id)
         {
-            List<Employee_Gen> employee_Gens = new List<Employee_Gen>();
             var e = await _context.Employees.FindAsync(id);
             if (e == null)
             {
@@ -76,16 +79,17 @@ namespace WebApi.Controllers
                     _gen.Tasks.Add(t);
                 }
             }
-            employee_Gens.Add(_gen);
-            return employee_Gens;
+            return _gen;
         }
         /// <summary>
-        /// Create Employee and Tasks
+        /// Create Employee and Tasks 
+        /// --同时创建员工和任务
         /// </summary>
         /// <param name="employee_Gen">include Employee and List<Task></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<Employee_Gen>> PostEmployee_Gen(Employee_Gen employee_Gen)
+        [ActionName(nameof(CreateEmployees_Tasks))]
+        public async Task<ActionResult<Employee_Gen>> CreateEmployees_Tasks(Employee_Gen employee_Gen)
         {
             Employee _e = new Employee();
             _e = employee_Gen.Employee;
@@ -105,15 +109,17 @@ namespace WebApi.Controllers
                 }
             }
             await _context.SaveChangesAsync(); //异步保存ALL
-            return CreatedAtAction("GetAllAsync", new { id = employee_Gen.Employee.Id }, employee_Gen);
+            return CreatedAtAction(nameof(CreateEmployees_Tasks), new { id = employee_Gen.Employee.Id }, employee_Gen);
         }
         /// <summary>
-        /// Add Tasks to Employee
+        /// Add Tasks to Employee 
+        /// --通过Employee ID向其添加任务
         /// </summary>
         /// <param name="id">Emplpyee id</param>
         /// <param name="tasks">New Tasks</param>
         /// <returns></returns>
-        [HttpPut]
+        [HttpPost("{id}")]
+        [ActionName(nameof(AddTasktoEmployee))]
         public async Task<ActionResult<Employee_Gen>> AddTasktoEmployee(int id, List<Models.Task> tasks)
         {
             var employee = await _context.Employees.FindAsync(id);
@@ -141,14 +147,15 @@ namespace WebApi.Controllers
                     employee_Gen.Tasks = tasks;
                 }
             }
-            return CreatedAtAction("GetAllAsync", new { id = employee_Gen.Employee.Id }, employee_Gen);
+            return CreatedAtAction(nameof(AddTasktoEmployee), new { id = employee_Gen.Employee.Id }, tasks);
         }
 
         /// <summary>
-        /// Only update employee and tasks info
+        /// Update employee and task
+        /// --更新员工和任务数据
         /// </summary>
-        /// <param name="id">Employee id</param>
-        /// <param name="employee_Gen">include Employee and List<Task></param>
+        /// <param name="id">员工id</param>
+        /// <param name="employee_Gen">员工model</param>
         /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee_Gen(int id, Employee_Gen employee_Gen)
@@ -182,6 +189,7 @@ namespace WebApi.Controllers
 
         /// <summary>
         /// Delete all by id
+        /// --删除员工及其任务
         /// </summary>
         /// <param name="id">Employee id</param>
         /// <returns></returns>
@@ -222,7 +230,8 @@ namespace WebApi.Controllers
             return NoContent();
         }
         /// <summary>
-        /// Use id to delete task from Table Relations ,Only delete form Relation.
+        /// Use id to delete task. 
+        /// --根据任务ID删除任务
         /// </summary>
         /// <param name="id">Employee Id</param>
         /// <param name="tid">Task id</param>
@@ -234,10 +243,12 @@ namespace WebApi.Controllers
             foreach (V_EmployeeTasks v in _v)
             {
                 Relation r = new Relation();
+                var task = _context.Tasks.Find(v.Tid);
                 r.Id = v.Id;
                 r.Eid = v.Eid;
                 r.Tid = v.Tid;
                 _context.Relations.Remove(r);
+                _context.Tasks.Remove(task);
             }
             await _context.SaveChangesAsync();
             return NoContent();
