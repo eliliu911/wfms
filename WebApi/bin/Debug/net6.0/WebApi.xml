@@ -4,7 +4,12 @@
         <name>WebApi</name>
     </assembly>
     <members>
-        <!-- Badly formed XML comment ignored for member "M:WebApi.Areas.Web.Controllers.EmployeesTasksController.Index" -->
+        <member name="M:WebApi.Areas.Web.Controllers.EmployeesTasksController.Index">
+            <summary>
+            Get 员工管理主页面
+            </summary>
+            <returns>List</returns>
+        </member>
         <member name="M:WebApi.Areas.Web.Controllers.EmployeesTasksController.Details(System.Nullable{System.Int32})">
             <summary>
             Get 根据ID获取员工信息

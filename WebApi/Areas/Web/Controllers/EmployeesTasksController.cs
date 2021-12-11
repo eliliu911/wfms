@@ -23,10 +23,10 @@ namespace WebApi.Areas.Web.Controllers
         /// <summary>
         /// Get 员工管理主页面
         /// </summary>
-        /// <returns>List<Employee_Gen></returns>
+        /// <returns>List</returns>
         public async Task<IActionResult> Index()
         {
-            List<Employee_Gen> employee_Gens = new List<Employee_Gen>();
+            List<Employee_Gen> employee_Gens = new();
             var _list = await _context.Employees.ToListAsync();
             foreach (Employee e in _list)
             {
@@ -57,7 +57,7 @@ namespace WebApi.Areas.Web.Controllers
         /// <returns>Employee_Gen</returns>
         public async Task<IActionResult> Details(int? id)
         {
-            Employee_Gen employee_Gen = new Employee_Gen();
+            Employee_Gen employee_Gen = new();
             var e = await _context.Employees.FindAsync(id);
             if (e == null)
             {
@@ -103,6 +103,7 @@ namespace WebApi.Areas.Web.Controllers
             {
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
+                TempData["Success"] = "Employee created successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);
@@ -115,7 +116,7 @@ namespace WebApi.Areas.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> Edit(int? id)
         {
-            Employee_Gen employee_Gen = new Employee_Gen();
+            Employee_Gen employee_Gen = new();
             var e = await _context.Employees.FindAsync(id);
             if (e == null)
             {
@@ -128,7 +129,7 @@ namespace WebApi.Areas.Web.Controllers
             {
                 foreach (V_EmployeeTasks v in tasks)
                 {
-                    WebApi.Models.Task t = new WebApi.Models.Task();
+                    WebApi.Models.Task t = new();
                     t.Id = v.Id;
                     t.TaskName = v.TaskName;
                     t.StartTime = v.StartTime;
@@ -160,6 +161,7 @@ namespace WebApi.Areas.Web.Controllers
                 {
                     _context.Update(employee);
                     await _context.SaveChangesAsync();
+                    TempData["Success"] = "Employee updated successfully";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -184,7 +186,7 @@ namespace WebApi.Areas.Web.Controllers
         /// <returns></returns>
         public async Task<IActionResult> Delete(int? id)
         {
-            Employee_Gen employee_Gen = new Employee_Gen();
+            Employee_Gen employee_Gen = new();
             var e = await _context.Employees.FindAsync(id);
             if (e == null)
             {
@@ -197,7 +199,7 @@ namespace WebApi.Areas.Web.Controllers
             {
                 foreach (V_EmployeeTasks v in tasks)
                 {
-                    WebApi.Models.Task t = new WebApi.Models.Task();
+                    WebApi.Models.Task t = new();
                     t.Id = v.Id;
                     t.TaskName = v.TaskName;
                     t.StartTime = v.StartTime;
@@ -250,7 +252,7 @@ namespace WebApi.Areas.Web.Controllers
             }
             _context.Employees.Remove(employee); //remove employee
             await _context.SaveChangesAsync(); //save changes
-
+            TempData["Success"] = "Employee deleted successfully";
 
             return RedirectToAction(nameof(Index));
         }
@@ -289,6 +291,7 @@ namespace WebApi.Areas.Web.Controllers
                 relation.Tid = task.Id;
                 _context.Relations.Add(relation);
                 await _context.SaveChangesAsync();
+                TempData["Success"] = "New Task created successfully";
                 return RedirectToAction(nameof(Edit), new { id = employee.Id });
             }
             return View(task);
@@ -335,6 +338,7 @@ namespace WebApi.Areas.Web.Controllers
                 {
                     _context.Update(task);
                     await _context.SaveChangesAsync();
+                    TempData["Success"] = "Task updated successfully";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -391,6 +395,7 @@ namespace WebApi.Areas.Web.Controllers
             }
             _context.Tasks.Remove(task);
             await _context.SaveChangesAsync();
+            TempData["Success"] = "Employee and Tasks deleted successfully";
             return RedirectToAction(nameof(Index));
         }
 

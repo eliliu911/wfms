@@ -17,6 +17,7 @@ Swashbuckle.AspNetCore
 Jquery
 Bootstrap
 Bootswtch
+Toaster
 
 
 ## WebApi
