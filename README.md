@@ -24,9 +24,12 @@ Toaster
 EmployeesController 仅对Employee进行CURD
 EmployeesTasksController 对于员工信息和员工任务进行CURD
 
-
 ## 示例地址
 WebApi ： https://localhost:44312/
 WebSite： https://localhost:44312/web
+
+## 测试工具
+POSTMAN
+Swagger
 
 #方案二：前后端分离，后端使用WebApi接口，前端使用ElementUI + Vue。开发成本略高。

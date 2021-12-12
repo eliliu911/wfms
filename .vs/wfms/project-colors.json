@@ -15,7 +15,12 @@
       "ProjectGuid": "a2559e02-3155-43fc-bb07-2725a34aa483",
       "DisplayName": "Solution Items",
       "ColorIndex": 1
+    },
+    "45c82807-f840-48a8-986f-754b773a4b50": {
+      "ProjectGuid": "45c82807-f840-48a8-986f-754b773a4b50",
+      "DisplayName": "WebApi.xUnit",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
