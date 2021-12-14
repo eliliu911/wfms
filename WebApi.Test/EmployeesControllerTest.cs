@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WebApi.Controllers;
@@ -23,19 +24,23 @@ namespace WebApi.Test
     {
         private readonly ApplicationDbContext _dbContext;
         private readonly EmployeesController _controller;
+        private readonly MyWebApplication _application;
+
+        public HttpClient client { get; }
+        
         public EmployeesControllerTest()
         {
             _dbContext = new ApplicationDbContext();
             _controller = new EmployeesController(_dbContext);
+
+            _application = new MyWebApplication();
+            client = _application.CreateClient();
         }
 
         [Fact]
         public async Task Get_Employees_ReturnsOkResult()
         {
-            var application = new MyWebApplication();
-            var client = application.CreateClient();
             var response = await client.GetAsync($"api/Employees");
-
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
