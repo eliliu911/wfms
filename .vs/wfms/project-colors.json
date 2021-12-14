@@ -20,7 +20,12 @@
       "ProjectGuid": "45c82807-f840-48a8-986f-754b773a4b50",
       "DisplayName": "WebApi.xUnit",
       "ColorIndex": 2
+    },
+    "6a8fbb72-9085-4023-860c-053473fecfb5": {
+      "ProjectGuid": "6a8fbb72-9085-4023-860c-053473fecfb5",
+      "DisplayName": "WebApi.Test",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }
